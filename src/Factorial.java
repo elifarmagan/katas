@@ -5,8 +5,9 @@ public class Factorial {
         System.out.println(res);
 
     }
+
     public static int factorial(int n) {
-        if(n < 0 || n > 12)
+        if (n < 0 || n > 12)
             throw new IllegalArgumentException();
 
         int result = 1;
@@ -15,6 +16,8 @@ public class Factorial {
             n--;
         }
 
-        return result ;
+        return result;
+
     }
 }
+
