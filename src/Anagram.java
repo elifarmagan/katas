@@ -33,4 +33,27 @@ public class Anagram {
 
         return variable1.equals(variable2);
     }
+
+
+    public static boolean isAnagramSecondWay(String test, String original) {
+        if (test.length() != original.length()) {
+            return false;
+        }
+
+        List<Character> variable1 = new ArrayList<>();
+        List<Character> variable2 = new ArrayList<>();
+
+        test = test.toLowerCase();
+        original = original.toLowerCase();
+
+        for (int i = 0; i < test.length(); i++) {
+            variable1.add(test.charAt(i));
+            variable2.add(original.charAt(i));
+        }
+
+        Collections.sort(variable1);
+        Collections.sort(variable2);
+
+        return variable1.equals(variable2);
+    }
 }
